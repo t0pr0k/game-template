@@ -18,10 +18,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -44,11 +44,13 @@ alignment = 1
 
 [node name="singleplayer" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "singleplayer"
 
 [node name="multiplayer" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "multiplayer"
 
@@ -57,6 +59,7 @@ layout_mode = 2
 
 [node name="settings" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "settings"
 
@@ -65,6 +68,7 @@ layout_mode = 2
 
 [node name="exit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "exit"
 
@@ -91,5 +95,7 @@ text = "0.0.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/singleplayer" to="." method="_on_singleplayer_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
