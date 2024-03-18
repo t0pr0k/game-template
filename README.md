@@ -1,1 +1,1 @@
-# 2dg
+# game template
